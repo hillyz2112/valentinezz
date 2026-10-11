@@ -1,0 +1,229 @@
+body {
+    background-color: #ffd6df;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* LETTER PAGE */
+
+.letter {
+    background-color: #fff9fb;
+    width: 500px;
+    margin: 150px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 3px solid #ffb6c8;
+}
+
+/* Envelope */
+
+.letter::before {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 90px;
+    background-color: #ffb6c8;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d94f70;
+    font-size: 38px;
+}
+
+/* BUTTONS */
+
+button {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* NO BUTTON */
+
+.button-no {
+    transition: none;
+}
+
+/* YES PAGE */
+
+.yes-page {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.yes-card h1 {
+    color: #d94f70;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.yes-card h2 {
+    color: #ff6f91;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.yes-page p {
+    color: #555;
+    font-size: 20px;
+}
+
+.yes-card {
+    background-color: #fff9fb;
+    width: 450px;
+    margin: 100px auto;
+    padding: 45px;
+    border-radius: 25px;
+    border: 3px solid #ffb6c8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* HEART */
+
+.heart {
+    width: 70px;
+    height: 70px;
+    background-color: #ff6f91;
+    transform: rotate(45deg);
+    margin: 60px auto;
+    animation: heartbeat 1s infinite;
+    position: relative;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-color: #ff6f91;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -35px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -35px;
+}
+
+/* HEART ANIMATION */
+
+@keyframes heartbeat {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* YES PAGE MESSAGE */
+
+.message {
+    font-size: 22px;
+    color: #d94f70;
+    margin-top: 30px;
+}
+
+.floating-hearts span {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #ff9fba;
+    transform: rotate(45deg);
+    animation: floatHeart 3s infinite ease-in-out;
+}
+
+.floating-hearts span::before,
+.floating-hearts span::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff9fba;
+    border-radius: 50%;
+}
+
+.floating-hearts span::before {
+    top: -10px;
+    left: 0;
+}
+
+.floating-hearts span::after {
+    top: 0;
+    left: -10px;
+}
+
+/* HEART 1 */
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+/* HEART 2 */
+.floating-hearts span:nth-child(2) {
+    left: 85%;
+    top: 25%;
+    animation-delay: 0.5s;
+}
+
+/* HEART 3 */
+.floating-hearts span:nth-child(3) {
+    left: 10%;
+    top: 75%;
+    animation-delay: 1s;
+}
+
+/* HEART 4 */
+.floating-hearts span:nth-child(4) {
+    left: 85%;
+    top: 70%;
+    animation-delay: 1.5s;
+}
+
+/* HEART 5 */
+.floating-hearts span:nth-child(5) {
+    left: 50%;
+    top: 8%;
+    animation-delay: 2s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 0.5;
+    }
+}
